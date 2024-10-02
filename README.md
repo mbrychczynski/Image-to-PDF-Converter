@@ -24,7 +24,7 @@ This Python script allows you to merge multiple `.JPG` images into a single PDF 
     ```
 3. Install the required dependencies:
     ```bash
-    pip install fpdf Pillow
+    python3 -m pip install --upgrade Pillow
     ```
 
 ## Usage
