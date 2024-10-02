@@ -50,4 +50,4 @@ for file in files:
     # Add the image to the PDF
     pdf.image(str(file), x_offset, y_offset, new_width, new_height)
 
-pdf.output("./PDF_result/pismo.pdf", "F")
+pdf.output("./PDF_result/result.pdf", "F")
