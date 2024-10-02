@@ -1,9 +1,11 @@
+import os.path
 import pathlib
 from fpdf import FPDF
 from PIL import Image
 
 A4_WIDTH = 210
 A4_HEIGHT = 297
+DIR_PATH = "./PDF_result"
 
 files = [f for f in pathlib.Path().glob("./IMGs_to_merge/*.JPG")]
 files.sort()
@@ -50,4 +52,7 @@ for file in files:
     # Add the image to the PDF
     pdf.image(str(file), x_offset, y_offset, new_width, new_height)
 
-pdf.output("./PDF_result/result.pdf", "F")
+if not os.path.exists("./PDF_result"):
+    os.makedirs(DIR_PATH)
+
+pdf.output(f"{DIR_PATH}/result.pdf", "F")
